@@ -1,51 +1,59 @@
 <body>
-    <section class="section">
-        <div class="container m-6 my-6 mgr-large">
+    <section>
+        <div class="m-6 mgr-large">
             <div class="columns">
                 <div class="column">
-                    <h1 class="title has-text-centered">TraductorPy</h1>
-                    <figure class="image ">
-                        <div class="box has-background-black-bis">
-                            <img src="https://i.postimg.cc/wx2MJjH3/Instalacion.gif">
-                        </div>
-                    </figure>
+                    <h1 class="title has-text-centered is-size-1">TraductorPy</h1>
+                    <div class="container">
+                        <figure class="image m-6">
+                            <div class="box has-background-black-bis">
+                                <img src="https://i.postimg.cc/wx2MJjH3/Instalacion.gif">
+                            </div>
+                        </figure>
 
-                    <div class="field has-addons m-6">
-                        <div class="control">
-                            <input class="input" type="text" placeholder="pip install traductorPy" disabled>
-                        </div>
-                        <div class="control">
-                            <a class="button is-info">
-                        Copy
-                      </a>
+                        <figure class="image m-6 ">
+                            <div class="box has-background-black-bis">
+                                <img src="https://i.postimg.cc/CL6KPrRg/Ejecucion.gif">
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div class="container">
+                        <div class="columns px-6">
+                            <div class="column px-6">
+                                <div class="field has-addons m-6">
+                                    <div class="control">
+                                        <input id="instalPython" class="input has-text-black" type="text" placeholder="pip install traductorPy" disabled value="pip install traductorPy">
+                                    </div>
+                                    <div class="control">
+                                        <a class="button is-info" (click)="copiarTexto(1)">Copiar</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column px-6">
+                                <div class="field has-addons m-6">
+                                    <div class="control">
+                                        <input id="ejemploCodigo" class="input has-text-black" type="text" placeholder="Ejemplo Codigo" disabled value="from traductorPy import Traductor \n print(Traductor.translater('Hola Mundo','ES','RU'))">
+                                    </div>
+                                    <div class="control">
+                                        <a class="button is-info" (click)="copiarTexto(2)">Copiar</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="columns m-6">
-                        <div class="column">
-                            <a href="https://pypi.org/project/traductorPy/" target="_blank" class="button is-large is-fullwidth is-link is-outlined">Pypi</a>
-                        </div>
-                        <div class="column">
-                            <a href="https://github.com/jrm2087/PyLang" target="_blank" class="button is-large is-fullwidth is-info is-outlined">GIT</a>
+                    <div class="container mb-6">
+                        <div class="columns m-6">
+                            <div class="column mb-6">
+                                <a href="https://pypi.org/project/traductorPy/" target="_blank" class="button is-large is-fullwidth is-link is-outlined has-text-black">Pypi</a>
+                            </div>
+                            <div class="column mb-6">
+                                <a href="https://github.com/jrm2087/PyLang" target="_blank" class="button is-large is-fullwidth is-success is-outlined has-text-black">GIT</a>
+                            </div>
                         </div>
                     </div>
 
-                    <figure class="image ">
-                        <div class="box has-background-black-bis">
-                            <img src="https://i.postimg.cc/CL6KPrRg/Ejecucion.gif">
-                        </div>
-                    </figure>
-
-                    <div class="field has-addons m-6">
-                        <div class="control">
-                            <input class="input" type="text" placeholder="pip install traductorPy" disabled>
-                        </div>
-                        <div class="control">
-                            <a class="button is-info">
-                        Copy
-                      </a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

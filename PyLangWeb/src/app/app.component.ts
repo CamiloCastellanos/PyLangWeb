@@ -11,7 +11,7 @@ export class AppComponent {
 
   id = "tsparticles";
 
-  particlesOptions:IParticlesProps = {
+  particlesOptions: IParticlesProps = {
     "autoPlay": true,
     "background": {
       "color": {
@@ -441,4 +441,25 @@ export class AppComponent {
     "responsive": [],
     "themes": []
   };
+
+  copiarTexto(tipoTexto: number) {
+    let texto = "pip install traductorPy";
+    if (tipoTexto != 1) {
+      texto += "from traductorPy import Traductor";
+      texto += "\n";
+      texto += "print(Traductor.translater('Hola Mundo','ES','RU'))";
+      texto += "\n";
+    }
+    const textAreaCopia = document.createElement('textarea');
+    textAreaCopia.value = texto;
+    textAreaCopia.setAttribute('readonly', '');
+    textAreaCopia.style.position = 'absolute';
+    textAreaCopia.style.left = '-9999px';
+    document.body.appendChild(textAreaCopia);
+    textAreaCopia.select();
+    document.execCommand('copy');
+    document.body.removeChild(textAreaCopia);
+    document.execCommand("copy");
+  }
+
 }
